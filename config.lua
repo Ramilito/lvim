@@ -20,13 +20,15 @@ lvim.builtin.project.patterns = { ".git" }
 lvim.builtin.project.detection_methods = { "pattern" }
 lvim.builtin.bufferline.active = true
 
-
 lvim.builtin.lualine.active = true
 lvim.builtin.lualine.options.globalstatus = true
 lvim.builtin.fancy_statusline = { active = false } -- enable/disable fancy statusline
 
 lvim.builtin.nvimtree.active = true
 lvim.builtin.nvimtree.setup.actions.open_file.resize_window = true
+
+lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
+table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
 
 require("user.init")
 require("lsp.init")
