@@ -1,8 +1,7 @@
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
   {
-    exe = "shellcheck",
+    exe = "bash-language-server",
     filetypes = { "sh" },
-    -- args = { "--severity", "warning" },
   },
 }
