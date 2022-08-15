@@ -1,2 +1,2 @@
 -- Omnisharp/C#
-require("lsp.omnisharp")
+-- require("lsp.omnisharp")
