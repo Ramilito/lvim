@@ -14,11 +14,11 @@ vim.opt.cmdheight = 1
 vim.opt.shortmess:append "c"
 
 -- Folding
--- vim.wo.foldcolumn = '1'
-vim.wo.foldlevel = 99 -- feel free to decrease the value
-vim.wo.foldenable = true
-vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
-vim.o.foldlevelstart = -1
+-- -- vim.wo.foldcolumn = '1'
+-- vim.wo.foldlevel = 99 -- feel free to decrease the value
+-- vim.wo.foldenable = true
+-- vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+-- vim.o.foldlevelstart = -1
 
 --rust
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "rust_analyzer" })

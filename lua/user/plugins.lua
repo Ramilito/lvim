@@ -111,4 +111,10 @@ lvim.plugins = {
     after = { "copilot.lua", "nvim-cmp" },
   },
   { "github/copilot.vim" },
+  {
+    'stevearc/overseer.nvim',
+    config = function()
+      require('overseer').setup()
+    end
+  },
 }
