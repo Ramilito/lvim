@@ -1,3 +1,8 @@
+-- unmap a default keymapping
+lvim.keys.insert_mode["kj"] = false -- Better Escape doesnt handle kj delay input
+lvim.keys.insert_mode["jj"] = false -- Better Escape doesnt handle kj delay input
+lvim.keys.insert_mode["jk"] = false -- Better Escape doesnt handle kj delay input
+
 -- keymappings
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<TAB>"] = ":bnext<CR>"
