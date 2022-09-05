@@ -22,7 +22,6 @@ lvim.builtin.bufferline.active = true
 
 lvim.builtin.lualine.active = true
 lvim.builtin.lualine.options.globalstatus = true
-lvim.builtin.fancy_statusline = { active = false } -- enable/disable fancy statusline
 
 lvim.builtin.nvimtree.active = true
 lvim.builtin.nvimtree.setup.actions.open_file.resize_window = true
@@ -32,10 +31,6 @@ table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
 
 require("user.init")
 require("lsp.init")
-
-if lvim.builtin.fancy_statusline.active then
-  require("user.lualine")
-end
 
 -- lvim.autocommands.custom_groups = {
 --   { "WinEnter,CursorHold,TabEnter,FocusGained", "*", ":checktime" },
