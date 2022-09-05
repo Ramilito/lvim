@@ -78,6 +78,12 @@ lvim.plugins = {
       require('telescope').load_extension('sessions_picker')
     end
   },
+  -- {
+  --   'anuvyklack/hydra.nvim',
+  --   config = function()
+  --     require("user.hydra").config()
+  --   end,
+  -- },
   {
     "simrat39/rust-tools.nvim",
     config = function()
@@ -108,7 +114,7 @@ lvim.plugins = {
   {
     'stevearc/overseer.nvim',
     config = function()
-      require('overseer').setup()
+      require("user.overseer").config()
     end
   },
 }
