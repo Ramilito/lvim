@@ -79,12 +79,6 @@ lvim.plugins = {
     end
   },
   {
-    'anuvyklack/hydra.nvim',
-    config = function()
-      require("user.hydra").config()
-    end,
-  },
-  {
     "simrat39/rust-tools.nvim",
     config = function()
       require("user.rust_tools").config()
