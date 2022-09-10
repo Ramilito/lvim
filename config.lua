@@ -19,17 +19,19 @@ lvim.builtin.notify.active = true
 lvim.builtin.project.patterns = { ".git" }
 lvim.builtin.project.detection_methods = { "pattern" }
 lvim.builtin.bufferline.active = true
+lvim.builtin.bufferline.options.indicator_icon = nil
+lvim.builtin.bufferline.options.indicator = { style = "icon", icon = "▎" }
 
 lvim.builtin.lualine.active = true
 lvim.builtin.lualine.options.globalstatus = true
 
 lvim.builtin.nvimtree.active = false
 
-lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
-table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
-
 require("user.init")
 require("lsp.init")
+
+lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
+table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
 
 -- lvim.autocommands.custom_groups = {
 --   { "WinEnter,CursorHold,TabEnter,FocusGained", "*", ":checktime" },
