@@ -9,7 +9,12 @@ M.config = function()
 
 
 leap.setup {
-  case_insensitive = true,
+  max_aot_targets = nil,
+  highlight_unlabeled = false,
+  case_sensitive = false,
+  -- Sets of characters that should match each other.
+  -- Obvious candidates are braces and quotes ('([{', ')]}', '`"\'').
+  equivalence_classes = { ' \t\r\n', },
   -- Leaving the appropriate list empty effectively disables "smart" mode,
   -- and forces auto-jump to be on or off.
   safe_labels = { . . . },
@@ -21,7 +26,6 @@ leap.setup {
     prev_match    = '<tab>',
     next_group    = '<space>',
     prev_group    = '<tab>',
-    eol           = '<space>',
   },
 }
 end
