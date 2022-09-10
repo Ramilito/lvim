@@ -23,8 +23,7 @@ lvim.builtin.bufferline.active = true
 lvim.builtin.lualine.active = true
 lvim.builtin.lualine.options.globalstatus = true
 
-lvim.builtin.nvimtree.active = true
-lvim.builtin.nvimtree.setup.actions.open_file.resize_window = true
+lvim.builtin.nvimtree.active = false
 
 lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
 table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
