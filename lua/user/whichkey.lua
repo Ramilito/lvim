@@ -1,5 +1,6 @@
 lvim.builtin.which_key.mappings["P"] = { "<CMD>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings["z"] = { "<CMD>lua require('zen-mode').toggle()<CR>", "Zen" }
+lvim.builtin.which_key.mappings["e"] = { "<CMD>NeoTreeRevealToggle<CR>", "Explorer" }
 
 lvim.builtin.which_key.mappings["t"] = {
   name = "+Trouble",
@@ -31,7 +32,7 @@ lvim.builtin.which_key.mappings["s"]["i"] = { "<CMD>PickIconsInsert<CR>", "Pick 
 lvim.builtin.which_key.mappings["D"] = { "<CMD>lua require('nvim-docker').containers.list_containers()<CR>", "Docker" }
 lvim.builtin.which_key.mappings["o"] = {
   name = "+Overseer",
-  t = { "<CMD>OverseerToggle<CR>", "Toggle" },
+  t = { "<CMD>OverseerToggle[!]<CR>", "Toggle" },
   r = { "<CMD>OverseerRun<CR>", "Run" }
 }
 

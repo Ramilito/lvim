@@ -1,6 +1,11 @@
 lvim.builtin.bufferline.options.always_show_bufferline = true
 lvim.builtin.bufferline.options.separator_style = "thin"
-
+lvim.builtin.bufferline.options.offsets[2] = {
+  filetype = "neo-tree",
+  text = "Explorer",
+  highlight = "PanelHeading",
+  padding = 1,
+}
 -- vim.g.bufferline = {
 --   no_name_title = "Empty",
 --   -- Enable/disable animations
