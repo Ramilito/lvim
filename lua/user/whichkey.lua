@@ -23,11 +23,7 @@ lvim.builtin.which_key.mappings["s"]["s"] = { "<CMD>Telescope sessions_picker<CR
 -- }
 -- end
 
-lvim.builtin.which_key.mappings["b"]["a"] = { "<CMD>:%bd|e#<CR>", "Close all but this" }
-
-
 lvim.builtin.which_key.mappings["s"]["i"] = { "<CMD>PickIconsInsert<CR>", "Pick icons" }
-
 
 lvim.builtin.which_key.mappings["D"] = { "<CMD>lua require('nvim-docker').containers.list_containers()<CR>", "Docker" }
 lvim.builtin.which_key.mappings["o"] = {

@@ -97,20 +97,27 @@ lvim.plugins = {
     config = function()
     end
   },
-  { "zbirenbaum/copilot.lua",
+  {
+    "zbirenbaum/copilot.lua",
+    commit = "ede741d935cf5d962c9a9e44db2400ed1a4aaf13",
     event = { "VimEnter" },
     config = function()
       vim.defer_fn(function()
+        print("copilot enter")
         require("copilot").setup {
           plugin_manager_path = get_runtime_dir() .. "/site/pack/packer",
         }
       end, 100)
     end,
   },
-  { "zbirenbaum/copilot-cmp",
+  {
+    "zbirenbaum/copilot-cmp",
+    commit = "67825246fa2aa6226ec3320d554640aa4697e1b1",
     after = { "copilot.lua", "nvim-cmp" },
   },
-  { "github/copilot.vim" },
+  {
+    "github/copilot.vim"
+  },
   {
     'stevearc/overseer.nvim',
     config = function()
