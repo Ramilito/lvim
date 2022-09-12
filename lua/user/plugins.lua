@@ -99,7 +99,6 @@ lvim.plugins = {
   },
   {
     "zbirenbaum/copilot.lua",
-    commit = "ede741d935cf5d962c9a9e44db2400ed1a4aaf13",
     event = { "VimEnter" },
     config = function()
       vim.defer_fn(function()
@@ -112,8 +111,10 @@ lvim.plugins = {
   },
   {
     "zbirenbaum/copilot-cmp",
-    commit = "67825246fa2aa6226ec3320d554640aa4697e1b1",
     after = { "copilot.lua", "nvim-cmp" },
+    config = function()
+      require("copilot_cmp").setup()
+    end
   },
   {
     "github/copilot.vim"
