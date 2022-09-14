@@ -1,11 +1,11 @@
 lvim.builtin.alpha.active = true
 
-table.insert(lvim.builtin.alpha.dashboard.section.buttons.entries,
-  {
-    "SPC S l",
-    "💾 Load Session",
-    "<CMD>lua require('persistence').load({last = true}) <CR>"
-  })
+-- table.insert(lvim.builtin.alpha.dashboard.section.buttons.entries,
+--   {
+--     "SPC S l",
+--     "💾 Load Session",
+--     "<CMD>lua require('persistence').load({last = true}) <CR>"
+--   })
 
 
 lvim.builtin.alpha.dashboard.section.header.val = {

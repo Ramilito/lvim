@@ -92,12 +92,6 @@ lvim.plugins = {
     ft = { "rust", "rs" },
   },
   {
-    'dgrbrady/nvim-docker',
-    requires = "MunifTanjim/nui.nvim",
-    config = function()
-    end
-  },
-  {
     "zbirenbaum/copilot.lua",
     event = { "VimEnter" },
     config = function()

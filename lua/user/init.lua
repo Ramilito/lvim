@@ -1,7 +1,7 @@
 require("user.plugins")
 require("user.alpha")
 require("user.bufferline")
-require("user.dap")
+-- require("user.dap")
 require("user.keymappings")
 require("user.lsp")
 require("user.lualine")

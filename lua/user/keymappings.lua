@@ -30,3 +30,15 @@ lvim.keys.visual_mode["<S-Down>"] = ":m '>+1<CR>gv=gv"
 
 -- Telescope
 lvim.keys.normal_mode["<C-p>"] = ":lua require'user/telescope'.find_open_buffers()<CR>"
+
+
+-- Don't overrite yanked text
+lvim.keys.visual_mode["<leader>p"] = "\"_dP"
+
+-- 
+-- lvim.keys.normal_mode["<leader>y"] = "\"+y"
+-- lvim.keys.visual_mode["<leader>y"] = "\"+y"
+
+-- lvim.keys.visual_mode["<leader>d"] = "\"_d"
+-- lvim.keys.normal_mode["<leader>d"] = "\"_d"
+

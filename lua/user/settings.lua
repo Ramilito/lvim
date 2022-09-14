@@ -6,6 +6,7 @@ vim.opt.laststatus = 3
 vim.o.number = true
 vim.o.relativenumber = true
 
+vim.opt.timeoutlen = 20
 vim.opt.confirm = true
 vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
 
@@ -14,7 +15,7 @@ vim.opt.cmdheight = 1
 vim.opt.shortmess:append "c"
 
 -- Folding
--- -- vim.wo.foldcolumn = '1'
+-- vim.wo.foldcolumn = '1'
 -- vim.wo.foldlevel = 99 -- feel free to decrease the value
 -- vim.wo.foldenable = true
 -- vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
