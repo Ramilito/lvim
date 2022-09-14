@@ -36,9 +36,10 @@ lvim.keys.normal_mode["<C-p>"] = ":lua require'user/telescope'.find_open_buffers
 lvim.keys.visual_mode["<leader>p"] = "\"_dP"
 
 -- 
--- lvim.keys.normal_mode["<leader>y"] = "\"+y"
--- lvim.keys.visual_mode["<leader>y"] = "\"+y"
+lvim.keys.normal_mode["<leader>y"] = "\"+y"
+lvim.keys.visual_mode["<leader>y"] = "\"+y"
 
--- lvim.keys.visual_mode["<leader>d"] = "\"_d"
--- lvim.keys.normal_mode["<leader>d"] = "\"_d"
+lvim.keys.visual_mode["<leader>d"] = "\"_d"
+lvim.keys.normal_mode["<leader>d"] = "\"_d"
 
+lvim.keys.normal_mode["Q"] = "<nop>"
