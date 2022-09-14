@@ -1,5 +1,4 @@
 lvim.builtin.which_key.mappings = {
-  [";"] = { "<cmd>Alpha<CR>", "Dashboard" },
   ["q"] = { "<cmd>lua require('lvim.utils.functions').smart_quit()<CR>", "Quit" },
   ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
   ["c"] = { "<cmd>BufferKill<CR>", "Close Buffer" },
@@ -92,8 +91,8 @@ lvim.builtin.which_key.mappings = {
   },
   u = {
     name = "+Utils",
-    s = { "<cmd>PackerSync<cr>", "PackerSync" },
-    L = { name = "+LunarVim",
+    p = { "<cmd>PackerSync<cr>", "PackerSync" },
+    l = { name = "+LunarVim",
       c = {
         "<cmd>edit " .. get_config_dir() .. "/config.lua<cr>",
         "Edit config.lua",
@@ -155,9 +154,9 @@ lvim.builtin.which_key.mappings = {
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
     H = { "<cmd>Telescope highlights<cr>", "Find highlight groups" },
     M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
-    r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+    r = { "<CMD>Telescope oldfiles<CR>", "Open Recent File" },
     R = { "<cmd>Telescope registers<cr>", "Registers" },
-    t = { "<cmd>Telescope live_grep<cr>", "Text" },
+    t = { "<CMD>Telescope live_grep<CR>", "Text" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
     p = {

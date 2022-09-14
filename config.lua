@@ -10,8 +10,8 @@ lvim.transparent_window = false
 
 -- customization
 lvim.builtin.terminal.active = true
-lvim.builtin.alpha.active = true
-lvim.builtin.dap.active = true
+lvim.builtin.alpha.active = false
+lvim.builtin.dap.active = false
 -- lvim.builtin.cheat.active = true
 lvim.builtin.autopairs.active = true
 lvim.builtin.notify.active = true
