@@ -6,12 +6,11 @@ vim.opt.laststatus = 3
 vim.o.number = true
 vim.o.relativenumber = true
 
-vim.opt.timeoutlen = 20
+vim.opt.timeoutlen = 1000
 vim.opt.confirm = true
 vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
 
 -- Bottom line
-vim.opt.cmdheight = 1
 vim.opt.shortmess:append "c"
 
 -- Folding
