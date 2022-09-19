@@ -97,6 +97,7 @@ lvim.builtin.which_key.mappings = {
       r = { "<cmd>LvimReload<cr>", "Reload LunarVim's configuration" },
       u = { "<cmd>LvimUpdate<cr>", "Update LunarVim" },
     },
+  },
   P = { "<CMD>Telescope projects<CR>", "Projects" },
   s = {
     name = "Search",
