@@ -115,5 +115,11 @@ lvim.plugins = {
       require("user.neo-tree").config()
     end
   },
+  {
+    "SmiteshP/nvim-navic",
+    requires = "neovim/nvim-lspconfig",
+    config = function()
+      require("user.nvim-navic").config()
+    end,
   }
 }
