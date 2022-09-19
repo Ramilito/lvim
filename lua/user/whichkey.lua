@@ -1,5 +1,6 @@
 lvim.builtin.which_key.mappings = {
   ["q"] = { "<cmd>lua require('lvim.utils.functions').smart_quit()<CR>", "Quit" },
+  [";"] = { "<cmd>Alpha<CR>", "Dashboard" },
   ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
   ["c"] = { "<cmd>BufferKill<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
@@ -9,54 +10,6 @@ lvim.builtin.which_key.mappings = {
     }
   },
   e = { "<CMD>NeoTreeRevealToggle<CR>", "Explorer" },
-  g = { name = "Git",
-    h = {
-      name = "+Github",
-      c = {
-        name = "+Commits",
-        c = { "<cmd>GHCloseCommit<cr>", "Close" },
-        e = { "<cmd>GHExpandCommit<cr>", "Expand" },
-        o = { "<cmd>GHOpenToCommit<cr>", "Open To" },
-        p = { "<cmd>GHPopOutCommit<cr>", "Pop Out" },
-        z = { "<cmd>GHCollapseCommit<cr>", "Collapse" },
-      },
-      i = {
-        name = "+Issues",
-        p = { "<cmd>GHPreviewIssue<cr>", "Preview" },
-      },
-      l = {
-        name = "+Litee",
-        t = { "<cmd>LTPanel<cr>", "Toggle Panel" },
-      },
-      r = {
-        name = "+Review",
-        b = { "<cmd>GHStartReview<cr>", "Begin" },
-        c = { "<cmd>GHCloseReview<cr>", "Close" },
-        d = { "<cmd>GHDeleteReview<cr>", "Delete" },
-        e = { "<cmd>GHExpandReview<cr>", "Expand" },
-        s = { "<cmd>GHSubmitReview<cr>", "Submit" },
-        z = { "<cmd>GHCollapseReview<cr>", "Collapse" },
-      },
-      p = {
-        name = "+Pull Request",
-        c = { "<cmd>GHClosePR<cr>", "Close" },
-        d = { "<cmd>GHPRDetails<cr>", "Details" },
-        e = { "<cmd>GHExpandPR<cr>", "Expand" },
-        o = { "<cmd>GHOpenPR<cr>", "Open" },
-        p = { "<cmd>GHPopOutPR<cr>", "PopOut" },
-        r = { "<cmd>GHRefreshPR<cr>", "Refresh" },
-        t = { "<cmd>GHOpenToPR<cr>", "Open To" },
-        z = { "<cmd>GHCollapsePR<cr>", "Collapse" },
-      },
-      t = {
-        name = "+Threads",
-        c = { "<cmd>GHCreateThread<cr>", "Create" },
-        n = { "<cmd>GHNextThread<cr>", "Next" },
-        t = { "<cmd>GHToggleThread<cr>", "Toggle" },
-      },
-    }
-
-  },
   l = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
@@ -144,7 +97,6 @@ lvim.builtin.which_key.mappings = {
       r = { "<cmd>LvimReload<cr>", "Reload LunarVim's configuration" },
       u = { "<cmd>LvimUpdate<cr>", "Update LunarVim" },
     },
-  },
   P = { "<CMD>Telescope projects<CR>", "Projects" },
   s = {
     name = "Search",
@@ -165,16 +117,6 @@ lvim.builtin.which_key.mappings = {
     },
   },
   z = { "<CMD>lua require('zen-mode').toggle()<CR>", "Zen" },
-}
-
-lvim.builtin.which_key.mappings["t"] = {
-  name = "+Trouble",
-  r = { "<cmd>Trouble lsp_references<cr>", "References" },
-  f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
-  d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
-  q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
-  l = { "<cmd>Trouble loclist<cr>", "LocationList" },
-  w = { "<cmd>Trouble workspace_diagnostics<cr>", "Diagnostics" },
 }
 
 -- Sessions
