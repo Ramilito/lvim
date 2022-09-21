@@ -13,6 +13,9 @@ M.config = function()
     depth_limit_indicator = "..",
   }
 end
+vim.api.nvim_set_hl(0, "WinWarning", { fg = "#e0af68" })
+vim.api.nvim_set_hl(0, "WinError", { default = true, bg = "NONE", fg = "#f7768e" })
+
 
 vim.api.nvim_set_hl(0, "NavicIconsFile",          {default = true, bg = "NONE", fg = "#abb2bf"})
 vim.api.nvim_set_hl(0, "NavicIconsModule",        {default = true, bg = "NONE", fg = "#46a6b2"})

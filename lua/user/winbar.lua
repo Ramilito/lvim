@@ -69,6 +69,11 @@ local function get_diagnostics()
   end
 end
 
+local function get_icon()
+  local icon, hl = utils.get_icon()
+  return "%#" .. hl .. "#" .. icon .. " " .. "%t" .. "%*"
+end
+
 local function get_location()
   local location = navic.get_location()
   if not is_empty(location) then
@@ -84,11 +89,10 @@ function M.get_winbar()
   end
 
   if navic.is_available() then
-    return "%#NavicSeparator#"
-        -- .. "%="
-        .. "%*"
+    return get_icon()
         .. get_diagnostics()
-        -- .. get_modified()
+        .. "%#NavicSeparator#"
+        .. "%*"
         .. get_location()
         .. "%#NavicSeparator#"
         .. "%*"

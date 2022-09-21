@@ -75,11 +75,39 @@ function M.get_diagnostics()
 
   last_diagnostics_result = result
   return setmetatable(result, mt)
+end
 
-  -- return result
-  -- vim.cmd(
-  --   [[autocmd User CocDiagnosticChange lua require('bufferline.diagnostics').refresh_coc_diagnostics()]]
-  -- )
+function M.get_icon()
+  local loaded, webdev_icons = pcall(require, "nvim-web-devicons")
+  local path = vim.fn.bufname()
+  local filetype = vim.bo.filetype
+
+  if vim.fn.isdirectory(path) > 0 then
+    local hl = loaded and "DevIconDefault" or nil
+    return "", hl
+  end
+
+  if not loaded then
+    if vim.fn.exists("*WebDevIconsGetFileTypeSymbol") > 0 then
+      return vim.fn.WebDevIconsGetFileTypeSymbol(path), ""
+    end
+    return "", ""
+  end
+  if type == "terminal" then return webdev_icons.get_icon(type) end
+
+  local icon, hl
+  if filetype then
+    -- Don't use a default here so that we fall through to the next case if no icon is found
+    icon, hl = webdev_icons.get_icon_by_filetype(filetype, { default = false })
+  end
+  if not icon then
+    icon, hl = webdev_icons.get_icon(vim.fn.fnamemodify(path, ":t"), filetype, {
+      true,
+    })
+  end
+
+  if not icon then return "", "" end
+  return icon, hl
 end
 
 return M
