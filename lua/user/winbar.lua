@@ -42,36 +42,23 @@ local get_buf_option = function(opt)
   end
 end
 
-local function get_modified()
-  if get_buf_option "mod" then
-    return "%#NavicText#" .. "" .. " " .. "%t" .. "%*"
-  end
-  return "%#NavicText#" .. "%t" .. "%*"
-end
-
--- local diagnostics_indicator = function(level)
---   local icon = level:match("error") and " " or " "
---   return icon
--- end
-
-local function get_diagnostics()
+local function get_file()
   local diagnostics = utils.get_diagnostics()
-  -- local indicator = diagnostics_indicator(diagnostics.level)
+  local icon, hl = utils.get_icon()
+  local filename = "%#" .. hl .. "#" .. "   " .. " " .. "%t" .. "%*"
+  if icon then
+    filename = "%#" .. hl .. "#" .. icon .. " " .. "%t" .. "%*"
+  end
 
   if diagnostics.level == "error" then
-    return "%#WinError#" .. " " .. "%t" .. "%*"
+    return "%#WinError#" .. " " .. filename
   elseif diagnostics.level == "warning" then
-    return "%#WinWarning#" .. " " .. "%t" .. "%*"
+    return "%#WinWarning#" .. " " .. filename
   elseif get_buf_option "mod" then
-    return "%#NavicText#" .. " " .. "%t" .. "%*"
+    return "%#NavicText#" .. " " .. filename
   else
-    return "%#NavicText#" .. "  " .. "%t" .. "%*"
+    return "%#NavicText#" .. "  " .. filename
   end
-end
-
-local function get_icon()
-  local icon, hl = utils.get_icon()
-  return "%#" .. hl .. "#" .. icon .. " " .. "%t" .. "%*"
 end
 
 local function get_location()
@@ -89,15 +76,14 @@ function M.get_winbar()
   end
 
   if navic.is_available() then
-    return get_icon()
-        .. get_diagnostics()
+    return get_file()
         .. "%#NavicSeparator#"
         .. "%*"
         .. get_location()
         .. "%#NavicSeparator#"
         .. "%*"
   else
-    return "%#NavicSeparator#" .. "%=" .. "%*" .. get_modified() .. "%#NavicSeparator#" .. "%*"
+    return "%#NavicSeparator#" .. "%*" .. "  " .. get_file() .. "%#NavicSeparator#" .. "%*"
   end
 end
 
