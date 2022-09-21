@@ -81,6 +81,7 @@ function M.get_icon()
   local loaded, webdev_icons = pcall(require, "nvim-web-devicons")
   local path = vim.fn.bufname()
   local filetype = vim.bo.filetype
+  local extension = vim.fn.fnamemodify(path, ":e")
 
   if vim.fn.isdirectory(path) > 0 then
     local hl = loaded and "DevIconDefault" or nil
@@ -96,12 +97,13 @@ function M.get_icon()
   if type == "terminal" then return webdev_icons.get_icon(type) end
 
   local icon, hl
+  print(filetype)
   if filetype then
     -- Don't use a default here so that we fall through to the next case if no icon is found
     icon, hl = webdev_icons.get_icon_by_filetype(filetype, { default = false })
   end
   if not icon then
-    icon, hl = webdev_icons.get_icon(vim.fn.fnamemodify(path, ":t"), filetype, {
+    icon, hl = webdev_icons.get_icon(vim.fn.fnamemodify(path, ":t"), extension, {
       true,
     })
   end
