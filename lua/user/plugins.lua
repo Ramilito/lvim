@@ -1,5 +1,4 @@
 lvim.plugins = {
-  { "folke/tokyonight.nvim" },
   { "stevearc/dressing.nvim" },
   { "Hoffs/omnisharp-extended-lsp.nvim" },
   { "folke/trouble.nvim",
@@ -45,17 +44,17 @@ lvim.plugins = {
       { 'nvim-lua/plenary.nvim' },
     }
   },
-  { "lukas-reineke/indent-blankline.nvim",
-    event = "BufRead",
-    setup = function()
-      vim.g.indentLine_enabled = 1
-      vim.g.indent_blankline = "| "
-      vim.g.indent_blankline_filetype_exclude = { "help", "terminal", "dashboard" }
-      vim.g.indent_blankline_buftype_exlude = { "terminal" }
-      vim.g.indent_blankline_show_trailing_blankline_indent = false
-      vim.g.indent_blanklline_show_first_indent_level = false
-    end
-  },
+  -- { "lukas-reineke/indent-blankline.nvim",
+  --   event = "BufRead",
+  --   setup = function()
+  --     vim.g.indentLine_enabled = 1
+  --     vim.g.indent_blankline = "| "
+  --     vim.g.indent_blankline_filetype_exclude = { "help", "terminal", "dashboard" }
+  --     vim.g.indent_blankline_buftype_exlude = { "terminal" }
+  --     vim.g.indent_blankline_show_trailing_blankline_indent = false
+  --     vim.g.indent_blanklline_show_first_indent_level = false
+  --   end
+  -- },
   { 'JoseConseco/telescope_sessions_picker.nvim',
     config = function()
       require('telescope').load_extension('sessions_picker')
@@ -102,11 +101,11 @@ lvim.plugins = {
       require 'window-picker'.setup()
     end,
   },
-  { "kyazdani42/nvim-web-devicons" },
   { "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
     requires = {
       "nvim-lua/plenary.nvim",
+      "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
       "s1n7ax/nvim-window-picker"
     },
@@ -120,5 +119,6 @@ lvim.plugins = {
     config = function()
       require("user.nvim-navic").config()
     end,
-  }
+  },
+  { 'nvim-treesitter/nvim-treesitter-context' }
 }

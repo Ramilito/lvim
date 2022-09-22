@@ -97,7 +97,6 @@ function M.get_icon()
   if type == "terminal" then return webdev_icons.get_icon(type) end
 
   local icon, hl
-  print(filetype)
   if filetype then
     -- Don't use a default here so that we fall through to the next case if no icon is found
     icon, hl = webdev_icons.get_icon_by_filetype(filetype, { default = false })

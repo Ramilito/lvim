@@ -34,3 +34,12 @@ lvim.builtin.lualine.winbar = {
   lualine_y = {},
   lualine_z = {}
 }
+
+lvim.builtin.lualine.inactive_winbar = {
+  lualine_a = { winbar.get_winbar },
+  lualine_b = {},
+  lualine_c = {},
+  lualine_x = {},
+  lualine_y = {},
+  lualine_z = {}
+}
