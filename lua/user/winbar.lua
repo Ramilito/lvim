@@ -3,9 +3,6 @@ local M = {}
 local navic = require "nvim-navic"
 local utils = require "user.utils"
 
-vim.api.nvim_set_hl(0, "WinWarning", { fg = "#e0af68" })
-vim.api.nvim_set_hl(0, "WinError", { default = true, bg = "NONE", fg = "#f7768e" })
-
 M.winbar_filetype_exclude = {
   "help",
   "startify",
