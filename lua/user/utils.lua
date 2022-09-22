@@ -111,4 +111,15 @@ function M.get_icon()
   return icon, hl
 end
 
+function M.close_all_but_current()
+  local current = vim.fn.bufnr('%')
+  local buffers = vim.fn.getbufinfo({ buflisted = 1 })
+  for _, buffer in ipairs(buffers) do
+    if buffer.bufnr ~= current then
+      vim.api.nvim_buf_delete(buffer.bufnr, { force = true })
+    end
+  end
+
+end
+
 return M

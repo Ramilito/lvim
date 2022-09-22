@@ -6,7 +6,7 @@ lvim.builtin.which_key.mappings = {
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   b = { name = "Buffers",
     a = {
-      "<cmd>BufferLineCloseLeft<cr><cmd>BufferLineCloseRight<cr> ", "Close all but current"
+      "<cmd>lua require('user.utils').close_all_but_current()<CR>", "Close all but current"
     }
   },
   e = { "<CMD>NeoTreeRevealToggle<CR>", "Explorer" },
