@@ -9,6 +9,7 @@ lvim.builtin.lualine.options.disabled_filetypes = {
     "packer",
     "neogitstatus",
     "NvimTree",
+    "neo-tree",
     "Trouble",
     "alpha",
     "lir",
