@@ -117,7 +117,7 @@ lvim.plugins = {
     "SmiteshP/nvim-navic",
     requires = "neovim/nvim-lspconfig",
     config = function()
-      require("user.nvim-navic").config()
+      require("user.navic").config()
     end,
   },
   { 'nvim-treesitter/nvim-treesitter-context' }

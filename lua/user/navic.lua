@@ -15,6 +15,7 @@ M.config = function()
 end
 
 vim.api.nvim_set_hl(0, "WinWarning", { fg = "#e0af68" })
-vim.api.nvim_set_hl(0, "WinError", { bg = "NONE", fg = "#f7768e" })
+vim.api.nvim_set_hl(0, "WinError", { bg = "NONE", fg = "#db4b4b" })
 vim.api.nvim_set_hl(0, "WinInactive", { bg = "NONE", fg = "#545c7e" })
+
 return M
