@@ -37,7 +37,7 @@ lvim.builtin.lualine.winbar = {
 }
 
 lvim.builtin.lualine.inactive_winbar = {
-  lualine_a = { winbar.get_winbar },
+  lualine_a = { winbar.get_winbar_inactive },
   lualine_b = {},
   lualine_c = {},
   lualine_x = {},

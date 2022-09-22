@@ -61,12 +61,46 @@ local function get_file()
   end
 end
 
+local function get_file_inactive()
+  local diagnostics = utils.get_diagnostics()
+  local icon, hl = utils.get_icon()
+  hl = "WinInactive"
+  local filename = "%#" .. hl .. "#" .. "   " .. " " .. "%t" .. "%*"
+  if icon then
+    filename = "%#" .. hl .. "#" .. icon .. " " .. "%t" .. "%*"
+  end
+
+  if diagnostics.level == "error" then
+    return "%#WinInactive#" .. " " .. filename
+  elseif diagnostics.level == "warning" then
+    return "%#WinInactive#" .. " " .. filename
+  elseif get_buf_option "mod" then
+    return "%#WinInactive#" .. " " .. filename
+  else
+    return "%#WinInactive#" .. "  " .. filename
+  end
+end
+
 local function get_location()
   local location = navic.get_location()
   if not is_empty(location) then
     return "%#NavicText#" .. " " .. ">" .. " " .. location .. "%*"
   end
   return ""
+end
+
+function M.get_winbar_inactive()
+  -- Use lualine disable file types
+  if excludes() then
+    return ""
+  end
+
+  if navic.is_available() then
+    return get_file_inactive()
+        .. "%*"
+  else
+    return "%#WinInactive#" .. "%*" .. "  " .. get_file_inactive() .. "%#WinInactive#" .. "%*"
+  end
 end
 
 function M.get_winbar()
