@@ -55,7 +55,7 @@ local function get_file()
   elseif diagnostics.level == "warning" then
     return "%#WinWarning#" .. " " .. filename
   elseif get_buf_option "mod" then
-    return "%#NavicText#" .. " " .. filename
+    return "%#WinWarning#" .. " " .. filename
   else
     return "%#NavicText#" .. "  " .. filename
   end
@@ -71,11 +71,11 @@ local function get_file_inactive()
   end
 
   if diagnostics.level == "error" then
-    return "%#WinInactive#" .. " " .. filename
+    return "%#WinError#" .. " " .. filename
   elseif diagnostics.level == "warning" then
-    return "%#WinInactive#" .. " " .. filename
+    return "%#WinWarning#" .. " " .. filename
   elseif get_buf_option "mod" then
-    return "%#WinInactive#" .. " " .. filename
+    return "%#WinWarning#" .. " " .. filename
   else
     return "%#WinInactive#" .. "  " .. filename
   end
@@ -99,7 +99,7 @@ function M.get_winbar_inactive()
     return get_file_inactive()
         .. "%*"
   else
-    return "%#WinInactive#" .. "%*" .. "  " .. get_file_inactive() .. "%#WinInactive#" .. "%*"
+    return "%#WinInactive#" .. "%*" .. get_file_inactive() .. "%#WinInactive#" .. "%*"
   end
 end
 
@@ -117,7 +117,7 @@ function M.get_winbar()
         .. "%#NavicSeparator#"
         .. "%*"
   else
-    return "%#NavicSeparator#" .. "%*" .. "  " .. get_file() .. "%#NavicSeparator#" .. "%*"
+    return "%#NavicSeparator#" .. "%*" .. get_file() .. "%#NavicSeparator#" .. "%*"
   end
 end
 
