@@ -1,4 +1,3 @@
-local components = require("lvim.core.lualine.components")
 local winbar = require "user.winbar"
 
 lvim.builtin.lualine.options.disabled_filetypes = {
@@ -17,14 +16,6 @@ lvim.builtin.lualine.options.disabled_filetypes = {
     "spectre_panel",
     "toggleterm",
   },
-}
-
-lvim.builtin.lualine.sections.lualine_x = {
-  "overseer",
-  components.diagnostics,
-  components.treesitter,
-  components.lsp,
-  components.filetype,
 }
 
 lvim.builtin.lualine.winbar = {
