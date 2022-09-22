@@ -70,7 +70,6 @@ lvim.plugins = {
     config = function()
       require("user.rust_tools").config()
     end,
-    ft = { "rust", "rs" },
   },
   { "zbirenbaum/copilot.lua",
     event = { "VimEnter" },
