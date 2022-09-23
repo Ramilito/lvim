@@ -8,6 +8,7 @@ M.winbar_filetype_exclude = {
   "startify",
   "dashboard",
   "packer",
+  "neo-tree",
   "neogitstatus",
   "NvimTree",
   "Trouble",
