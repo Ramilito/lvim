@@ -42,4 +42,7 @@ lvim.keys.visual_mode["<leader>y"] = "\"+y"
 lvim.keys.visual_mode["<leader>d"] = "\"_d"
 lvim.keys.normal_mode["<leader>d"] = "\"_d"
 
+-- unmaps
 lvim.keys.normal_mode["Q"] = "<nop>"
+lvim.keys.normal_mode["q"] = "<nop>"
+-- vim.keymap.del("n", "<C-Up>")
