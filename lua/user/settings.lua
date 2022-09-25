@@ -1,6 +1,7 @@
 vim.opt.autoread = true
 vim.opt.showtabline = 0
 vim.opt.laststatus = 3
+vim.opt.cmdheight = 0
 -- vim.opt.winbar = "%f"
 
 vim.o.number = true
