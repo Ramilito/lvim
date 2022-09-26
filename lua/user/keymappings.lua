@@ -9,10 +9,10 @@ lvim.keys.normal_mode["<TAB>"] = ":bnext<CR>"
 lvim.keys.normal_mode["<S-TAB>"] = ":bprevious<CR>"
 
 -- Better window navigation
-lvim.keys.normal_mode["<C-Left>"] = "<C-w>h"
-lvim.keys.normal_mode["<C-Right>"] = "<C-w>l"
-lvim.keys.normal_mode["<C-Up>"] = "<C-w>k"
-lvim.keys.normal_mode["<C-Down>"] = "<C-w>j"
+lvim.keys.normal_mode["<C-Left>"] = "<C-w><left>"
+lvim.keys.normal_mode["<C-Right>"] = "<C-w><right>"
+lvim.keys.normal_mode["<C-Up>"] = "<C-w><up>"
+lvim.keys.normal_mode["<C-Down>"] = "<C-w><down>"
 
 -- Resize windows
 lvim.keys.normal_mode["<C-S-Left>"] = ":vertical resize -2<CR>"
