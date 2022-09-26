@@ -121,7 +121,7 @@ lvim.builtin.which_key.mappings = {
 }
 
 -- Sessions
-lvim.builtin.which_key.mappings["s"]["s"] = { "<CMD>Telescope sessions_picker<CR>", "Sessions" }
+lvim.builtin.which_key.mappings["s"]["s"] = { "<CMD>Telescope session-lens search_session<CR>", "Sessions" }
 lvim.builtin.which_key.mappings["s"]["i"] = { "<CMD>PickIconsInsert<CR>", "Pick icons" }
 
 lvim.builtin.which_key.mappings["o"] = {

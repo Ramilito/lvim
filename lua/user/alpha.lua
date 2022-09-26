@@ -21,7 +21,7 @@ lvim.builtin.alpha.dashboard.section.buttons.entries = {
   {
     "s",
     "💾 Load Session",
-    "<CMD>lua require('persistence').load({last = true}) <CR>"
+    "<CMD>:Telescope session-lens search_session<CR>"
   }
 }
 

@@ -2,13 +2,11 @@ lvim.plugins = {
   { "stevearc/dressing.nvim" },
   { "Hoffs/omnisharp-extended-lsp.nvim" },
   { "folke/trouble.nvim",
-    cmd = "TroubleToggle",
-  },
+    cmd = "TroubleToggle" },
   { "folke/zen-mode.nvim",
     config = function()
       require("user.zen").config()
-    end,
-  },
+    end },
   -- {
   --   'kevinhwang91/nvim-ufo',
   --   requires = 'kevinhwang91/promise-async',
@@ -19,58 +17,48 @@ lvim.plugins = {
   { "ziontee113/icon-picker.nvim",
     config = function()
       require("icon-picker")
-    end
-  },
+    end },
   { "ggandor/leap.nvim",
     config = function()
       require("leap").set_default_keymaps()
       require("leap").opts.ignore_case = true
-    end,
-  },
+    end },
   { "kylechui/nvim-surround",
     config = function()
       require("nvim-surround").setup({})
-    end,
-  },
+    end },
   { "karb94/neoscroll.nvim",
     config = function()
       require("user.neoscroll").config()
-    end,
-  },
+    end },
   { 'sudormrfbin/cheatsheet.nvim',
     requires = {
       { 'nvim-telescope/telescope.nvim' },
       { 'nvim-lua/popup.nvim' },
       { 'nvim-lua/plenary.nvim' },
-    }
-  },
-  -- { "lukas-reineke/indent-blankline.nvim",
-  --   event = "BufRead",
-  --   setup = function()
-  --     vim.g.indentLine_enabled = 1
-  --     vim.g.indent_blankline = "| "
-  --     vim.g.indent_blankline_filetype_exclude = { "help", "terminal", "dashboard" }
-  --     vim.g.indent_blankline_buftype_exlude = { "terminal" }
-  --     vim.g.indent_blankline_show_trailing_blankline_indent = false
-  --     vim.g.indent_blanklline_show_first_indent_level = false
-  --   end
-  -- },
-  { 'JoseConseco/telescope_sessions_picker.nvim',
-    config = function()
-      require('telescope').load_extension('sessions_picker')
-    end
-  },
+    } },
   -- {
   --   'anuvyklack/hydra.nvim',
   --   config = function()
   --     require("user.hydra").config()
   --   end,
   -- },
+  { 'rmagatti/auto-session',
+    config = function()
+      require("auto-session").setup {
+        log_level = "error",
+        pre_save_cmds = { "lua require'neo-tree'.setup()", "tabdo NeoTreeClose" }
+      }
+    end },
+  { 'rmagatti/session-lens',
+    requires = { 'rmagatti/auto-session', 'nvim-telescope/telescope.nvim' },
+    config = function()
+      require('session-lens').setup({ --[[your custom config--]] })
+    end },
   { "simrat39/rust-tools.nvim",
     config = function()
       require("user.rust_tools").config()
-    end,
-  },
+    end },
   { "zbirenbaum/copilot.lua",
     event = { "VimEnter" },
     config = function()
@@ -79,27 +67,22 @@ lvim.plugins = {
           plugin_manager_path = get_runtime_dir() .. "/site/pack/packer",
         }
       end, 100)
-    end,
-  },
+    end },
   { "zbirenbaum/copilot-cmp",
     after = { "copilot.lua", "nvim-cmp" },
     config = function()
       require("copilot_cmp").setup()
-    end
-  },
-  { "github/copilot.vim"
-  },
+    end },
+  { "github/copilot.vim" },
   { 'stevearc/overseer.nvim',
     config = function()
       require("user.overseer").config()
-    end
-  },
+    end },
   { 's1n7ax/nvim-window-picker',
     tag = 'v1.*',
     config = function()
       require 'window-picker'.setup()
-    end,
-  },
+    end },
   { "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
     requires = {
@@ -110,14 +93,21 @@ lvim.plugins = {
     },
     config = function()
       require("user.neo-tree").config()
-    end
-  },
-  {
-    "SmiteshP/nvim-navic",
+    end },
+  { "SmiteshP/nvim-navic",
     requires = "neovim/nvim-lspconfig",
     config = function()
       require("user.navic").config()
-    end,
-  },
-  { 'nvim-treesitter/nvim-treesitter-context' }
+    end },
+  -- not working
+  -- { "nvim-treesitter/nvim-treesitter-context",
+  --   config = function()
+  --     require("treesitter-context").setup()
+  --   end,
+  -- },
+  -- { "sunjon/shade.nvim",
+  --   config = function()
+  --     require("shade").setup()
+  --   end,
+  -- }
 }

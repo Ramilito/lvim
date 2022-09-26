@@ -9,7 +9,7 @@ vim.o.relativenumber = true
 
 vim.opt.timeoutlen = 1000
 vim.opt.confirm = true
-vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
 
 -- Bottom line
 vim.opt.shortmess:append "c"
