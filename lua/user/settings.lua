@@ -24,7 +24,6 @@ vim.opt.shortmess:append "c"
 --rust
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "rust_analyzer" })
 
-
 if vim.fn.has "wsl" == 1 then
   vim.g.clipboard = {
     copy = {
