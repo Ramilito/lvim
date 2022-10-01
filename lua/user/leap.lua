@@ -3,8 +3,6 @@ if not status_ok then
   return
 end
 
-
-
 leap.setup {
   max_aot_targets = nil,
   highlight_unlabeled = false,
