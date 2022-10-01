@@ -3,58 +3,33 @@ lvim.plugins = {
   { "Hoffs/omnisharp-extended-lsp.nvim" },
   { "folke/trouble.nvim", cmd = "TroubleToggle" },
   { "folke/zen-mode.nvim" },
-  -- {
-  --   'kevinhwang91/nvim-ufo',
-  --   requires = 'kevinhwang91/promise-async',
-  --   config = function()
-  --     require("user.ufo").config()
-  --   end,
-  -- },
-  { "ziontee113/icon-picker.nvim",
-    config = function()
-      require("icon-picker")
-    end },
+  { "SmiteshP/nvim-navic", requires = "neovim/nvim-lspconfig" },
+  { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" },
+  { "j-hui/fidget.nvim" },
+  { "windwp/nvim-spectre" },
+  { "github/copilot.vim" },
+  { 'stevearc/overseer.nvim' },
+  { "simrat39/rust-tools.nvim" },
+  { "kylechui/nvim-surround" },
+  { "karb94/neoscroll.nvim" },
+  { 'rmagatti/auto-session' },
+  { "ziontee113/icon-picker.nvim" },
   { "ggandor/leap.nvim",
     config = function()
       require("leap").set_default_keymaps()
       require("leap").opts.ignore_case = true
     end },
-  { "kylechui/nvim-surround",
-    config = function()
-      require("nvim-surround").setup({})
-    end },
-  { "karb94/neoscroll.nvim" },
   { 'sudormrfbin/cheatsheet.nvim',
     requires = {
       { 'nvim-telescope/telescope.nvim' },
       { 'nvim-lua/popup.nvim' },
       { 'nvim-lua/plenary.nvim' },
     } },
-  -- {
-  --   'anuvyklack/hydra.nvim',
-  --   config = function()
-  --     require("user.hydra").config()
-  --   end,
-  -- },
-  { 'rmagatti/auto-session',
-    config = function()
-      require("auto-session").setup {
-        log_level = "error",
-        pre_save_cmds = { "lua require'neo-tree'.setup()", "tabdo NeoTreeClose" },
-        auto_session_suppress_dirs = { "~/", "/" },
-        cwd_change_handling = {
-          restore_upcoming_session = true,
-          pre_cwd_changed_hook = nil, -- lua function hook. This is called after auto_session code runs for the `DirChangedPre` autocmd
-          post_cwd_changed_hook = nil, -- lua function hook. This is called after auto_session code runs for the `DirChanged` autocmd
-        }
-      }
-    end },
   { 'rmagatti/session-lens',
     requires = { 'rmagatti/auto-session', 'nvim-telescope/telescope.nvim' },
     config = function()
       require('session-lens').setup({ --[[your custom config--]] })
     end },
-  { "simrat39/rust-tools.nvim" },
   { "zbirenbaum/copilot.lua",
     event = { "VimEnter" },
     config = function()
@@ -69,8 +44,6 @@ lvim.plugins = {
     config = function()
       require("copilot_cmp").setup()
     end },
-  { "github/copilot.vim" },
-  { 'stevearc/overseer.nvim' },
   { 's1n7ax/nvim-window-picker',
     tag = 'v1.*',
     config = function()
@@ -90,8 +63,14 @@ lvim.plugins = {
       "s1n7ax/nvim-window-picker"
     }
   },
-  { "SmiteshP/nvim-navic", requires = "neovim/nvim-lspconfig" },
-  { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }
+
+  -- {
+  --   'anuvyklack/hydra.nvim',
+  --   config = function()
+  --     require("user.hydra").config()
+  --   end,
+  -- },
+
   -- not working
   -- { "nvim-treesitter/nvim-treesitter-context",
   --   config = function()
@@ -103,4 +82,12 @@ lvim.plugins = {
   --     require("shade").setup()
   --   end,
   -- }
+  -- {
+  --   'kevinhwang91/nvim-ufo',
+  --   requires = 'kevinhwang91/promise-async',
+  --   config = function()
+  --     require("user.ufo").config()
+  --   end,
+  -- },
+
 }
