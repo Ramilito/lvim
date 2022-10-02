@@ -31,7 +31,6 @@ lvim.keys.visual_mode["<S-Down>"] = ":m '>+1<CR>gv=gv"
 -- Telescope
 lvim.keys.normal_mode["<C-p>"] = ":lua require'user/telescope'.find_open_buffers()<CR>"
 
-
 -- Don't overrite yanked text
 lvim.keys.visual_mode["<leader>p"] = "\"_dP"
 
@@ -46,3 +45,11 @@ lvim.keys.normal_mode["<leader>d"] = "\"_d"
 lvim.keys.normal_mode["Q"] = "<nop>"
 lvim.keys.normal_mode["q"] = "<nop>"
 -- vim.keymap.del("n", "<C-Up>")
+
+vim.api.nvim_set_keymap('n', 'h', '<nop>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'j', '<nop>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'k', '<nop>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'l', '<nop>', { noremap = true, silent = true })
+
+-- delete word ctrl bs seems to be sent as C-H 
+vim.api.nvim_set_keymap('i', '<C-H>', '<C-w>', { noremap = true, silent = true })
