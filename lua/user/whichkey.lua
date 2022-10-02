@@ -120,6 +120,8 @@ lvim.builtin.which_key.mappings = {
   z = { "<CMD>lua require('zen-mode').toggle()<CR>", "Zen" },
 }
 
+lvim.builtin.which_key.mappings["g"] = { "<cmd>lua require 'lvim.core.terminal'.lazygit_toggle()<cr>", "Lazygit" }
+
 -- Sessions
 lvim.builtin.which_key.mappings["s"]["s"] = { "<CMD>Telescope session-lens search_session<CR>", "Sessions" }
 lvim.builtin.which_key.mappings["s"]["i"] = { "<CMD>PickIconsInsert<CR>", "Pick icons" }
@@ -132,8 +134,8 @@ lvim.builtin.which_key.mappings["o"] = {
 
 -- replace
 lvim.builtin.which_key.mappings["r"] = {
-	name = "Replace",
-	r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
-	w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
-	f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
+  name = "Replace",
+  r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
+  w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
+  f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
 }
