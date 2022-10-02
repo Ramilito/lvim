@@ -1,6 +1,7 @@
 -- -- require("user.dap")
 -- require("user.bufferline")
 require("user.alpha")
+require("user.auto-session")
 require("user.cheatsheet")
 require("user.copilot")
 require("user.copilot-cmp")
