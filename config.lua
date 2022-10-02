@@ -6,17 +6,17 @@ lvim.log.level = "info"
 lvim.format_on_save = false
 lvim.colorscheme = "tokyonight"
 lvim.transparent_window = false
--- lvim.leader = "space"
 
 -- customization
 lvim.builtin.terminal.active = true
 lvim.builtin.alpha.active = true
 lvim.builtin.notify.active = true
 lvim.builtin.dap.active = false
--- lvim.builtin.cheat.active = true
 
-lvim.builtin.project.patterns = { ".git" }
-lvim.builtin.project.detection_methods = { "pattern" }
+lvim.builtin.project.active = false
+-- lvim.builtin.project.patterns = { ".git" }
+-- lvim.builtin.project.detection_methods = { "pattern" }
+
 lvim.builtin.bufferline.active = false
 lvim.builtin.lir.active = false
 lvim.builtin.breadcrumbs.active = false
