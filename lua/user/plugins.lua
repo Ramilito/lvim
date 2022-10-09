@@ -4,7 +4,6 @@ lvim.plugins = {
   { "folke/zen-mode.nvim" },
   { "j-hui/fidget.nvim" },
   { "windwp/nvim-spectre" },
-  { "github/copilot.vim" },
   { 'stevearc/overseer.nvim' },
   { "simrat39/rust-tools.nvim" },
   { "kylechui/nvim-surround" },
@@ -13,11 +12,24 @@ lvim.plugins = {
   { "ziontee113/icon-picker.nvim" },
   { "ggandor/leap.nvim" },
   { "folke/trouble.nvim", cmd = "TroubleToggle" },
-  { "zbirenbaum/copilot.lua", event = { "VimEnter" } },
-  { "zbirenbaum/copilot-cmp", after = { "copilot.lua", "nvim-cmp" } },
+  { "github/copilot.vim" },
   { 's1n7ax/nvim-window-picker', tag = 'v1.*' },
   { "SmiteshP/nvim-navic", requires = "neovim/nvim-lspconfig" },
   { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" },
+  { "zbirenbaum/copilot.lua",
+    event = { "VimEnter" },
+    config = function()
+      vim.defer_fn(function()
+        require("copilot").setup()
+      end, 100)
+    end,
+  },
+  { "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua", "nvim-cmp" },
+    config = function()
+      require("copilot_cmp").setup()
+    end
+  },
   { 'sudormrfbin/cheatsheet.nvim',
     requires = {
       { 'nvim-telescope/telescope.nvim' },

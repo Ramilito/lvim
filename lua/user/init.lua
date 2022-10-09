@@ -3,8 +3,6 @@
 require("user.alpha")
 require("user.auto-session")
 require("user.cheatsheet")
-require("user.copilot")
-require("user.copilot-cmp")
 require("user.fidget")
 require("user.icon-picker")
 require("user.keymappings")
