@@ -24,6 +24,7 @@ lvim.plugins = {
       end, 100)
     end,
   },
+  {'krivahtoo/silicon.nvim', run = './install.sh'},
   { "zbirenbaum/copilot-cmp",
     after = { "copilot.lua", "nvim-cmp" },
     config = function()

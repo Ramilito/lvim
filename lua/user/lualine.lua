@@ -18,7 +18,11 @@ lvim.builtin.lualine.options.disabled_filetypes = {
   },
 }
 
-lvim.builtin.lualine.sections.lualine_y = {  }
+lvim.builtin.lualine.sections.lualine_y = {}
+
+lvim.builtin.lualine.sections.lualine_c = {
+  require('auto-session-library').current_session_name
+}
 
 lvim.builtin.lualine.winbar = {
   lualine_a = { winbar.get_winbar },

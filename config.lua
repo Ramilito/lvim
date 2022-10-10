@@ -11,19 +11,18 @@ lvim.transparent_window = false
 lvim.builtin.terminal.active = true
 lvim.builtin.alpha.active = true
 lvim.builtin.notify.active = true
-lvim.builtin.dap.active = false
 
-lvim.builtin.project.active = false
 -- lvim.builtin.project.patterns = { ".git" }
 -- lvim.builtin.project.detection_methods = { "pattern" }
-
-lvim.builtin.bufferline.active = false
-lvim.builtin.lir.active = false
-lvim.builtin.breadcrumbs.active = false
 
 lvim.builtin.lualine.active = true
 lvim.builtin.lualine.options.globalstatus = true
 
+lvim.builtin.dap.active = false
+lvim.builtin.project.active = false
+lvim.builtin.bufferline.active = false
+lvim.builtin.lir.active = false
+lvim.builtin.breadcrumbs.active = false
 lvim.builtin.nvimtree.active = false
 
 require("user.init")
