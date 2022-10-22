@@ -6,13 +6,15 @@ vim.opt.cmdheight = 0
 
 vim.o.number = true
 vim.o.relativenumber = true
-
+vim.o.splitkeep = "screen"
 vim.opt.timeoutlen = 1000
 vim.opt.confirm = true
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
 
 -- Bottom line
 vim.opt.shortmess:append "c"
+
+
 
 -- Folding
 -- vim.wo.foldcolumn = '1'

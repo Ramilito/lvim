@@ -101,12 +101,19 @@ function M.get_winbar_inactive()
   end
 end
 
+function M.set_hl()
+  vim.api.nvim_set_hl(0, "WinWarning", { fg = "#e0af68" })
+  vim.api.nvim_set_hl(0, "WinError", { bg = "NONE", fg = "#f7768e" })
+  vim.api.nvim_set_hl(0, "WinInactive", { bg = "NONE", fg = "#545c7e" })
+end
+
 function M.get_winbar()
   -- Use lualine disable file types
   if excludes() then
     return ""
   end
 
+  M.set_hl()
   if navic.is_available() then
     return get_file()
         .. "%#NavicSeparator#"

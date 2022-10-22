@@ -16,15 +16,21 @@ lvim.plugins = {
   { 's1n7ax/nvim-window-picker', tag = 'v1.*' },
   { "SmiteshP/nvim-navic", requires = "neovim/nvim-lspconfig" },
   { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" },
+  { 'krivahtoo/silicon.nvim', run = './install.sh' },
   { "zbirenbaum/copilot.lua",
     event = { "VimEnter" },
     config = function()
       vim.defer_fn(function()
-        require("copilot").setup()
+        require("copilot").setup({
+          filetypes = {
+            -- yaml = true,
+            -- markdown = true,
+            ["*"] = true,
+          },
+        })
       end, 100)
     end,
   },
-  {'krivahtoo/silicon.nvim', run = './install.sh'},
   { "zbirenbaum/copilot-cmp",
     after = { "copilot.lua", "nvim-cmp" },
     config = function()
@@ -52,7 +58,19 @@ lvim.plugins = {
       "s1n7ax/nvim-window-picker"
     }
   },
-
+  -- {
+  --   "folke/noice.nvim",
+  --   event = "VimEnter",
+  --   config = function()
+  --     require("noice").setup()
+  --   end,
+  --   requires = {
+  --     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+  --     "MunifTanjim/nui.nvim",
+  --     "rcarriga/nvim-notify",
+  --     "hrsh7th/nvim-cmp",
+  --   }
+  -- }
   -- {
   --   'anuvyklack/hydra.nvim',
   --   config = function()
