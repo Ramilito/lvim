@@ -11,23 +11,25 @@ lvim.plugins = {
   { 'rmagatti/auto-session' },
   { "ziontee113/icon-picker.nvim" },
   { "ggandor/leap.nvim" },
-  { "folke/trouble.nvim", cmd = "TroubleToggle" },
   { "github/copilot.vim" },
+  { "folke/trouble.nvim", cmd = "TroubleToggle" },
   { 's1n7ax/nvim-window-picker', tag = 'v1.*' },
   { "SmiteshP/nvim-navic", requires = "neovim/nvim-lspconfig" },
   { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" },
   { 'krivahtoo/silicon.nvim', run = './install.sh' },
+  { "kevinhwang91/nvim-bqf", event = { "BufRead", "BufNew" } },
   { "zbirenbaum/copilot.lua",
     event = { "VimEnter" },
     config = function()
       vim.defer_fn(function()
-        require("copilot").setup({
+        require("copilot").setup {
+          plugin_manager_path = get_runtime_dir() .. "/site/pack/packer",
           filetypes = {
             -- yaml = true,
             -- markdown = true,
             ["*"] = true,
           },
-        })
+        }
       end, 100)
     end,
   },

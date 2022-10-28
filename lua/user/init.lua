@@ -5,6 +5,7 @@ require("user.plugins")
 
 require("user.alpha")
 require("user.auto-session")
+require("user.bqf")
 require("user.cheatsheet")
 require("user.fidget")
 require("user.icon-picker")

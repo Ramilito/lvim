@@ -14,8 +14,6 @@ vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,
 -- Bottom line
 vim.opt.shortmess:append "c"
 
-
-
 -- Folding
 -- vim.wo.foldcolumn = '1'
 -- vim.wo.foldlevel = 99 -- feel free to decrease the value

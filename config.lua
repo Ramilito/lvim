@@ -10,7 +10,6 @@ lvim.transparent_window = false
 -- customization
 lvim.builtin.terminal.active = true
 lvim.builtin.alpha.active = true
-lvim.builtin.notify.active = true
 
 -- lvim.builtin.project.patterns = { ".git" }
 -- lvim.builtin.project.detection_methods = { "pattern" }
