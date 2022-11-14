@@ -42,8 +42,8 @@ lvim.keys.visual_mode["<leader>d"] = "\"_d"
 lvim.keys.normal_mode["<leader>d"] = "\"_d"
 
 -- unmaps
-lvim.keys.normal_mode["Q"] = "<nop>"
-lvim.keys.normal_mode["q"] = "<nop>"
+vim.api.nvim_set_keymap('n', 'q', '<nop>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'Q', '<nop>', { noremap = true, silent = true })
 -- vim.keymap.del("n", "<C-Up>")
 
 vim.api.nvim_set_keymap('n', 'h', '<nop>', { noremap = true, silent = true })

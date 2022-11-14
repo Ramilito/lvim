@@ -4,7 +4,7 @@ package.path = package.path .. ";" .. home .. "/.config/lvim/?.lua"
 -- general
 lvim.log.level = "info"
 lvim.format_on_save = false
-lvim.colorscheme = "tokyonight"
+lvim.colorscheme = "nightowl"
 lvim.transparent_window = false
 
 -- customization
@@ -17,6 +17,7 @@ lvim.builtin.alpha.active = true
 lvim.builtin.lualine.active = true
 lvim.builtin.lualine.options.globalstatus = true
 
+lvim.builtin.indentlines.active = false
 lvim.builtin.dap.active = false
 lvim.builtin.project.active = false
 lvim.builtin.bufferline.active = false

@@ -3,12 +3,8 @@ lvim.builtin.which_key.mappings = {
   [";"] = { "<cmd>Alpha<CR>", "Dashboard" },
   ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
   ["c"] = { "<cmd>BufferKill<CR>", "Close Buffer" },
+  ["C"] = { "<cmd>lua require('user.utils').close_all_but_current()<CR>", "Close all but current" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-  b = { name = "Buffers",
-    a = {
-      "<cmd>lua require('user.utils').close_all_but_current()<CR>", "Close all but current"
-    }
-  },
   e = { "<CMD>NeoTreeRevealToggle<CR>", "Explorer" },
   l = {
     name = "LSP",
@@ -109,6 +105,7 @@ lvim.builtin.which_key.mappings = {
     r = { "<CMD>Telescope oldfiles<CR>", "Open Recent File" },
     R = { "<cmd>Telescope registers<cr>", "Registers" },
     t = { "<CMD>Telescope live_grep<CR>", "Text" },
+    w = { "<CMD>Telescope grep_string<CR>", "Find Word" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
     p = {
