@@ -22,7 +22,7 @@ lvim.builtin.dap.active = false
 lvim.builtin.project.active = false
 lvim.builtin.bufferline.active = false
 lvim.builtin.lir.active = false
-lvim.builtin.breadcrumbs.active = false
+lvim.builtin.breadcrumbs.active = true
 lvim.builtin.nvimtree.active = false
 
 require("user.init")
